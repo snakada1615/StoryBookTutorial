@@ -1,11 +1,11 @@
 
-import PureTaskList from './PureTaskList.vue';
+import TaskList from './TaskList.vue';
 
 import * as TaskStories from './Task.stories';
 
 export default {
-    component: PureTaskList,
-    title: 'PureTaskList',
+    component: TaskList,
+    title: 'TaskList',
     decorators: [
         () => ({ template: '<div style="margin: 3em;"><story/></div>' }),
     ],
@@ -16,11 +16,11 @@ export default {
 };
 
 const Template = (args, { argTypes }) => ({
-    components: { PureTaskList },
+    components: { TaskList },
     setup() {
         return { args, ...TaskStories.actionsData };
     },
-    template: '<PureTaskList v-bind="args" />',
+    template: '<TaskList v-bind="args" />',
 });
 
 export const Default = Template.bind({});
